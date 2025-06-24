@@ -1,0 +1,53 @@
+{
+  "navbar": {
+    "country": "Maroc"
+  },
+  "hero": {
+    "hook-1": "Votre voyage commence maintenant.",
+    "hook-2": "Réservez votre voiture en",
+    "hook-3": "Un clic !",
+    "subhook": "Explorer le Maroc est désormais rapide, simple et à un clic.",
+    "explore": "Explorer les voitures",
+    "howto-title": "Comment ça marche ?",
+    "howto-1": "Choisissez une voiture.",
+    "howto-2": "Remplissez le formulaire avec vos informations.",
+    "howto-3": "Réservez la voiture en un clic !"
+  },
+  "carSection": {
+    "economic-title": "Voitures économiques",
+    "economic": "Économique",
+    "midclass-title": "Voitures de moyenne gamme",
+    "midclass": "Moyenne gamme",
+    "luxurious-title": "Voitures de luxe",
+    "luxurious": "Luxe"
+  },
+  "carCard": {
+    "features": "Caractéristiques",
+    "perDay": "par jour",
+    "bookNow": "Réserver maintenant",
+    "cardTitle": "Réservez la voiture",
+    "cardDescription-1": "Remplissez le formulaire avec vos informations.",
+    "cardDescription-2": "Nous vous contacterons dès que possible.",
+    "fullname": "Nom complet",
+    "phone": "Numéro de téléphone",
+    "pickupLocation": "Lieu de récupération",
+    "returnLocation": "Lieu de retour",
+    "pickupDate": "Date de récupération",
+    "returnDate": "Date de retour",
+    "pickDate": "choisir une date...",
+    "cancel": "Annuler",
+    "booking": "Réservation de la voiture...",
+    "successBooking": "Voiture réservée avec succès",
+    "bookingError-1": "Une erreur s'est produite",
+    "bookingError-2": "Échec de l’envoi"
+  },
+  "footer": {
+    "contactUs": "Besoin d’aide ? Appelez-nous maintenant..."
+  },
+  "loader": {
+    "pageLoader": "Préparation de votre voiture..."
+  },
+  "metadata": {
+    "description": "Explorer le Maroc est désormais rapide, simple et à un seul clic. Réservez votre voiture en un clic."
+  }
+}

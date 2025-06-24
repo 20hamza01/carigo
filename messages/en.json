@@ -1,0 +1,53 @@
+{
+  "navbar": {
+    "country": "Morocco"
+  },
+  "hero": {
+    "hook-1": "Your Journey Starts Now.",
+    "hook-2": "Book Your Ride in",
+    "hook-3": "One Click!",
+    "subhook": "Exploring Morocco is now fast, simple, and just a click away.",
+    "explore": "Explore Cars",
+    "howto-title": "How it works?",
+    "howto-1": "Choose a car.",
+    "howto-2": "Fill the form with your informations.",
+    "howto-3": "Book the car in one click!"
+  },
+  "carSection": {
+    "economic-title": "Economic Cars",
+    "economic": "Economic",
+    "midclass-title": "Mid-Class Cars",
+    "midclass": "Mid-Class",
+    "luxurious-title": "Luxurious Cars",
+    "luxurious": "Luxurious"
+  },
+  "carCard": {
+    "features": "Features",
+    "perDay": "per day",
+    "bookNow": "Book Now",
+    "cardTitle": "Book the car",
+    "cardDescription-1": "Fill the form with your information.",
+    "cardDescription-2": "We will contact you as soon as possible.",
+    "fullname": "Fullname",
+    "phone": "Phone Number",
+    "pickupLocation": "Pick up Location",
+    "returnLocation": "Return Location",
+    "pickupDate": "Pick up Date",
+    "returnDate": "Return Date",
+    "pickDate": "pick a date...",
+    "cancel": "Cancel",
+    "booking": "Booking the car...",
+    "successBooking": "Car booked successfully",
+    "bookingError-1": "Something went wrong",
+    "bookingError-2": "Failed to submit"
+  },
+  "footer": {
+    "contactUs": "Need help? Call Us Now..."
+  },
+  "loader": {
+    "pageLoader": "Getting your ride ready..."
+  },
+  "metadata": {
+    "description": "Exploring Morocco is now fast, simple, and just a click away. Book your ride in on click."
+  }
+}
