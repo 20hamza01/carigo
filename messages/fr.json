@@ -39,7 +39,16 @@
     "booking": "Réservation de la voiture...",
     "successBooking": "Voiture réservée avec succès",
     "bookingError-1": "Une erreur s'est produite",
-    "bookingError-2": "Échec de l’envoi"
+    "bookingError-2": "Échec de l’envoi",
+    "carType": {
+      "Manual": "Manuelle",
+      "Automatic": "Automatique"
+    },
+    "fuel": {
+      "Diesel": "Diesel",
+      "Essence": "Essence",
+      "Electrique": "Électrique"
+    }
   },
   "footer": {
     "contactUs": "Besoin d’aide ? Appelez-nous maintenant..."

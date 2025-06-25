@@ -39,7 +39,16 @@
     "booking": "Booking the car...",
     "successBooking": "Car booked successfully",
     "bookingError-1": "Something went wrong",
-    "bookingError-2": "Failed to submit"
+    "bookingError-2": "Failed to submit",
+    "carType": {
+      "Manual": "Manual",
+      "Automatic": "Automatic"
+    },
+    "fuel": {
+      "Diesel": "Diesel",
+      "Essence": "Gasoline",
+      "Electrique": "Electric"
+    }
   },
   "footer": {
     "contactUs": "Need help? Call Us Now..."

@@ -137,11 +137,11 @@ export default function CarCard({
             <div className="flex flex-col gap-1 justify-between text-sm text-gray-700">
               <div className="flex items-center gap-1">
                 <Fuel className="w-4 h-4" />
-                {fuel}
+                {t(`fuel.${fuel}`)}
               </div>
               <div className="flex items-center gap-1">
                 <Cog className="w-4 h-4" />
-                {carType}
+                {t(`carType.${carType}`)}
               </div>
             </div>
           </div>
