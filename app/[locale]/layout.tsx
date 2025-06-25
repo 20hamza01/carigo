@@ -29,6 +29,12 @@ export async function generateMetadata({
   const { locale } = await params;
   const canonicalUrl = `${baseUrl}/${locale}`;
 
+  const ogImageUrl = locale === "en" ? "/og-image-en.png" : "/og-image-fr.png"; // fallback/default
+  const ogImageAlt =
+    locale === "en"
+      ? "Carigo – Rent a car in Morocco"
+      : "Carigo – Réserver votre voiture au Maroc"; // fallback/default
+
   return {
     metadataBase: new URL(baseUrl), //Required for relative URLs below
     title: "Carigo",
@@ -45,10 +51,10 @@ export async function generateMetadata({
       siteName: "Carigo",
       images: [
         {
-          url: `/og-image.png`,
+          url: ogImageUrl,
           width: 1200,
           height: 630,
-          alt: "Carigo – Rent a car in Morocco",
+          alt: ogImageAlt,
         },
       ],
       locale: locale === "fr" ? "fr_FR" : "en_US",
