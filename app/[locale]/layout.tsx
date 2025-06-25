@@ -23,7 +23,7 @@ const play = Play({
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const baseUrl = "https://carigo.vercel.app";
   const { locale } = await params;
