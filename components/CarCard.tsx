@@ -149,13 +149,13 @@ export default function CarCard({
 
         <Separator />
         <div className="flex items-center justify-between py-2">
-          <div className="w-1/3 ">
+          <div className="">
             <p className="text-lg font-bold">{price} Dhs</p>
             <p className="text-xs text-gray-500">{t("perDay")}</p>
           </div>
           <Dialog open={openDialog} onOpenChange={setOpenDialog}>
-            <DialogTrigger asChild className="w-2/3">
-              <Button className="bg-blue-500 hover:bg-blue-600 text-white">
+            <DialogTrigger asChild className="">
+              <Button className="bg-blue-500 hover:bg-blue-600 text-white px-2">
                 {t("bookNow")}
               </Button>
             </DialogTrigger>
