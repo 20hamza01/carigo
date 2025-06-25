@@ -46,7 +46,7 @@ export const cars: Car[] = [
     brand: "Peugeot",
     model: "208",
     pricePerDay: 230,
-    image: "",
+    image: "/peugeot-208.png",
     carType: "Manual",
     fuel: "Essence",
   },

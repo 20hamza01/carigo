@@ -14,11 +14,48 @@ const play = Play({
   subsets: ["cyrillic"],
 });
 
-export const metadata: Metadata = {
-  title: "Carigo",
-  description:
-    "Explorer le Maroc est désormais rapide, simple et à un seul clic. Réservez votre voiture en un clic - Exploring Morocco is now fast, simple, and just a click away. Book your ride in on click.",
-};
+// export const metadata: Metadata = {
+//   title: "Carigo",
+//   description:
+//     "Explorer le Maroc est maintenant simple et rapide. Réservez votre voiture en un clic – Exploring Morocco is now fast and easy. Book your car in just one click.",
+// };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  const baseUrl = "https://carigo.vercel.app";
+  const { locale } = await params;
+  const canonicalUrl = `${baseUrl}/${locale}`;
+
+  return {
+    metadataBase: new URL(baseUrl), //Required for relative URLs below
+    title: "Carigo",
+    description:
+      "Explorer le Maroc est maintenant simple et rapide. Réservez votre voiture en un clic – Exploring Morocco is now fast and easy. Book your car in just one click.",
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title: "Carigo",
+      description:
+        "Explorer le Maroc est maintenant simple et rapide. Réservez votre voiture en un clic – Exploring Morocco is now fast and easy. Book your car in just one click.",
+      url: canonicalUrl,
+      siteName: "Carigo",
+      images: [
+        {
+          url: `/og-image.png`,
+          width: 1200,
+          height: 630,
+          alt: "Carigo – Rent a car in Morocco",
+        },
+      ],
+      locale: locale === "fr" ? "fr_FR" : "en_US",
+      type: "website",
+    },
+  };
+}
 
 export default async function RootLayout({
   children,
