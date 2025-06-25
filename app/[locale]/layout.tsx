@@ -43,6 +43,9 @@ export async function generateMetadata({
     alternates: {
       canonical: canonicalUrl,
     },
+    icons: {
+      icon: "/favicon-v2.ico",
+    },
     openGraph: {
       title: "Carigo",
       description:
