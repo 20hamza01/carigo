@@ -114,8 +114,8 @@ export default function CarCard({
   };
 
   return (
-    <div className="rounded-xl shadow-md overflow-hidden border bg-white w-full max-w-sm">
-      <div className="bg-gray-100 p-1">
+    <div className="rounded-xl shadow-md overflow-hidden bg-white w-full max-w-sm h-full">
+      <div className="bg-gray-100 p-2">
         <Image
           src={image}
           alt={brand}
