@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import * as Sentry from "@sentry/nextjs";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -39,14 +40,19 @@ export async function POST(req: Request) {
       });
 
       if (emailRes.error) {
+        Sentry.captureException(
+          new Error(`RESEND FAILED: ${JSON.stringify(emailRes.error)}`)
+        );
         console.error("❌ [Resend Email Error]: ", emailRes.error);
       }
     } catch (emailErr) {
+      Sentry.captureException(emailErr);
       console.error("❌ [Resend Email Exception]", emailErr);
     }
 
     return NextResponse.json({ success: true, message: result });
   } catch (err) {
+    Sentry.captureException(err);
     return NextResponse.json({ success: false, error: err }, { status: 500 });
   }
 }
