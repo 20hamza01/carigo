@@ -39,7 +39,7 @@ const EconomicCars = () => {
           <h2 className="block md:hidden text-2xl font-bold text-blue-500 py-4 px-4">
             {t("economic-title")}
           </h2>
-          <div className="md:hidden w-full px-2">
+          <div className="block md:hidden w-full px-2">
             <div className="flex gap-12 overflow-x-scroll bg-transparent rounded-xl m-2">
               {economicCars.map((car, index) => (
                 <div

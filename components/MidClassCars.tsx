@@ -46,7 +46,7 @@ const EconomicCars = () => {
                   key={`${car.brand}-${car.model}-${index}`}
                 >
                   <CarCard
-                    carClass={t("economic")}
+                    carClass={t("midclass")}
                     brand={`${car.brand} ${car.model}`}
                     price={car.pricePerDay}
                     image={car.image || "/hero.png"}
