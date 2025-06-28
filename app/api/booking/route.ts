@@ -19,7 +19,7 @@ export async function POST(req: Request) {
 
     // Send email notification via Resend
     await resend.emails.send({
-      from: "no-reply@carigo.ma", // domain should be verified on Resend
+      from: "bookings@carigo.ma", // domain should be verified on Resend
       to: "hamzaalaouiismaili21@gmail.com", // your notification email
       subject: `🚘 New Booking: ${body.brand} by ${body.fullname}`,
       html: `
