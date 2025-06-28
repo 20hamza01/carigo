@@ -18,11 +18,12 @@ export async function POST(req: Request) {
     const result = await response.text();
 
     // Send email notification via Resend
-    await resend.emails.send({
-      from: "bookings@carigo.ma", // domain should be verified on Resend
-      to: "hamzaalaouiismaili21@gmail.com", // your notification email
-      subject: `🚘 New Booking: ${body.brand} by ${body.fullname}`,
-      html: `
+    try {
+      const emailRes = await resend.emails.send({
+        from: "bookings@carigo.ma", // domain should be verified on Resend
+        to: "hamzaalaouiismaili21@gmail.com", // your notification email
+        subject: `🚘 New Booking: ${body.brand} by ${body.fullname}`,
+        html: `
         <h2>New Booking Received</h2>
         <ul>
           <li><strong>Full Name:</strong> ${body.fullname}</li>
@@ -35,7 +36,14 @@ export async function POST(req: Request) {
           <li><strong>Price:</strong> ${body.price} Dhs/day</li>
         </ul>
       `,
-    });
+      });
+
+      if (emailRes.error) {
+        console.error("❌ [Resend Email Error]: ", emailRes.error);
+      }
+    } catch (emailErr) {
+      console.error("❌ [Resend Email Exception]", emailErr);
+    }
 
     return NextResponse.json({ success: true, message: result });
   } catch (err) {
