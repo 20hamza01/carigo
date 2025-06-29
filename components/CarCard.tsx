@@ -115,7 +115,7 @@ export default function CarCard({
 
   return (
     <div className="rounded-xl shadow-md overflow-hidden bg-white w-full max-w-sm h-full">
-      <div className="bg-gray-100 p-2">
+      <div className="bg-gray-100 p-2 h-[200px] flex items-center justify-center">
         <Image
           src={image}
           alt={brand}
@@ -125,14 +125,14 @@ export default function CarCard({
         />
       </div>
 
-      <div className="py-4 space-y-2 px-6">
-        <div className="flex gap-6 items-center justify-between py-4 px-1">
-          <div className="flex items-center justify-between flex-col">
+      <div className="h-[230px] py-4 space-y-2 flex flex-col justify-between align-middle my-2">
+        <div className="flex gap-6 items-center px-2">
+          <div className="flex items-center justify-between flex-col flex-1">
             <h3 className="text-md font-semibold text-center">{carClass}</h3>
             <p className="text-lg w-full text-center text-gray-600">{brand}</p>
           </div>
 
-          <div>
+          <div className="flex-1">
             <p className="text-xs text-gray-500 mb-2">{t("features")}</p>
             <div className="flex flex-col gap-1 justify-between text-sm text-gray-700">
               <div className="flex items-center gap-1">
@@ -148,146 +148,164 @@ export default function CarCard({
         </div>
 
         <Separator />
-        <div className="flex items-center justify-between py-2">
-          <div className="">
+        <div className="flex items-center gap-6 py-2 px-3">
+          <div className="flex-1 flex flex-col items-center">
             <p className="text-lg font-bold">{price} Dhs</p>
             <p className="text-xs text-gray-500">{t("perDay")}</p>
           </div>
-          <Dialog open={openDialog} onOpenChange={setOpenDialog}>
-            <DialogTrigger asChild className="">
-              <Button className="bg-blue-500 hover:bg-blue-600 text-white px-2">
-                {t("bookNow")}
-              </Button>
-            </DialogTrigger>
-            <DialogContent className="sm:max-w-[425px]">
-              <form onSubmit={handleSubmit} className="grid gap-4">
-                <DialogHeader>
-                  <DialogTitle className="text-start">
-                    {t("cardTitle")}
-                  </DialogTitle>
-                  <DialogDescription className="text-start">
-                    {t("cardDescription-1")} <br />
-                    {t("cardDescription-2")}
-                  </DialogDescription>
-                </DialogHeader>
+          <div className="flex flex-col items-center flex-1">
+            <Dialog open={openDialog} onOpenChange={setOpenDialog}>
+              <DialogTrigger asChild className="">
+                <Button className="bg-blue-500 hover:bg-blue-600 text-white px-2 w-full mr-3">
+                  {t("bookNow")}
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-[425px]">
+                <form onSubmit={handleSubmit} className="grid gap-4">
+                  <DialogHeader>
+                    <DialogTitle className="text-start">
+                      {t("cardTitle")}
+                    </DialogTitle>
+                    <DialogDescription className="text-start">
+                      {t("cardDescription-1")} <br />
+                      {t("cardDescription-2")}
+                    </DialogDescription>
+                  </DialogHeader>
 
-                <div className="grid gap-3">
-                  <Label htmlFor="fullname">{t("fullname")}</Label>
-                  <Input id="fullname" name="fullname" required />
-                </div>
-
-                <div className="grid gap-3">
-                  <Label htmlFor="phone">{t("phone")}</Label>
-                  <Input id="phone" name="phone" required />
-                </div>
-
-                <div className="grid gap-3">
-                  <Label htmlFor="pickup-location">{t("pickupLocation")}</Label>
-                  <Input id="pickup-location" name="pickup-location" required />
-                </div>
-
-                <div className="grid gap-3">
-                  <Label htmlFor="return-location">{t("returnLocation")}</Label>
-                  <Input id="return-location" name="return-location" required />
-                </div>
-
-                <div className="flex items-center justify-between py-6">
                   <div className="grid gap-3">
-                    <Label>{t("pickupDate")}</Label>
-                    <Popover open={openPickup} onOpenChange={setOpenPickup}>
-                      <PopoverTrigger asChild>
-                        <Button className="w-full bg-blue-500 hover:bg-blue-600">
-                          <CalendarIcon />
-                          {pickupDate ? (
-                            format(pickupDate, "PPP", { locale: dateFnsLocale })
-                          ) : (
-                            <span>{t("pickDate")}</span>
-                          )}
-                        </Button>
-                      </PopoverTrigger>
-                      <PopoverContent className="p-0 w-auto">
-                        <Calendar
-                          locale={dateFnsLocale}
-                          mode="single"
-                          selected={pickupDate}
-                          onSelect={(date) => {
-                            setPickupDate(date);
-                            // reset end date if it's before new start date
-                            if (returnDate && date && returnDate < date) {
-                              setReturnDate(undefined);
+                    <Label htmlFor="fullname">{t("fullname")}</Label>
+                    <Input id="fullname" name="fullname" required />
+                  </div>
+
+                  <div className="grid gap-3">
+                    <Label htmlFor="phone">{t("phone")}</Label>
+                    <Input id="phone" name="phone" required />
+                  </div>
+
+                  <div className="grid gap-3">
+                    <Label htmlFor="pickup-location">
+                      {t("pickupLocation")}
+                    </Label>
+                    <Input
+                      id="pickup-location"
+                      name="pickup-location"
+                      required
+                    />
+                  </div>
+
+                  <div className="grid gap-3">
+                    <Label htmlFor="return-location">
+                      {t("returnLocation")}
+                    </Label>
+                    <Input
+                      id="return-location"
+                      name="return-location"
+                      required
+                    />
+                  </div>
+
+                  <div className="flex items-center justify-between py-6">
+                    <div className="grid gap-3">
+                      <Label>{t("pickupDate")}</Label>
+                      <Popover open={openPickup} onOpenChange={setOpenPickup}>
+                        <PopoverTrigger asChild>
+                          <Button className="w-full bg-blue-500 hover:bg-blue-600">
+                            <CalendarIcon />
+                            {pickupDate ? (
+                              format(pickupDate, "PPP", {
+                                locale: dateFnsLocale,
+                              })
+                            ) : (
+                              <span>{t("pickDate")}</span>
+                            )}
+                          </Button>
+                        </PopoverTrigger>
+                        <PopoverContent className="p-0 w-auto">
+                          <Calendar
+                            locale={dateFnsLocale}
+                            mode="single"
+                            selected={pickupDate}
+                            onSelect={(date) => {
+                              setPickupDate(date);
+                              // reset end date if it's before new start date
+                              if (returnDate && date && returnDate < date) {
+                                setReturnDate(undefined);
+                              }
+                              setOpenPickup(false);
+                            }}
+                            disabled={isPast}
+                            modifiersClassNames={{
+                              disabled:
+                                "[&>button]:opacity-50 pointer-events-none",
+                            }}
+                            className="rounded-lg border shadow-sm"
+                          />
+                        </PopoverContent>
+                      </Popover>
+                    </div>
+
+                    <div className="grid gap-3">
+                      <Label>{t("returnDate")}</Label>
+                      <Popover open={openReturn} onOpenChange={setOpenReturn}>
+                        <PopoverTrigger asChild>
+                          <Button className="w-full bg-blue-500 hover:bg-blue-600">
+                            <CalendarIcon />
+                            {returnDate ? (
+                              format(returnDate, "PPP", {
+                                locale: dateFnsLocale,
+                              })
+                            ) : (
+                              <span>{t("pickDate")}</span>
+                            )}
+                          </Button>
+                        </PopoverTrigger>
+                        <PopoverContent className="p-0 w-auto">
+                          <Calendar
+                            locale={dateFnsLocale}
+                            mode="single"
+                            selected={returnDate}
+                            onSelect={(date) => {
+                              setReturnDate(date);
+                              setOpenReturn(false);
+                            }}
+                            // ✅ Disable past + before startDate
+                            disabled={(date) =>
+                              isPast(date) ||
+                              (pickupDate ? date < pickupDate : false)
                             }
-                            setOpenPickup(false);
-                          }}
-                          disabled={isPast}
-                          modifiersClassNames={{
-                            disabled:
-                              "[&>button]:opacity-50 pointer-events-none",
-                          }}
-                          className="rounded-lg border shadow-sm"
-                        />
-                      </PopoverContent>
-                    </Popover>
+                            modifiersClassNames={{
+                              disabled:
+                                "[&>button]:opacity-50 pointer-events-none",
+                            }}
+                            className="rounded-lg border shadow-sm"
+                          />
+                        </PopoverContent>
+                      </Popover>
+                    </div>
                   </div>
-
-                  <div className="grid gap-3">
-                    <Label>{t("returnDate")}</Label>
-                    <Popover open={openReturn} onOpenChange={setOpenReturn}>
-                      <PopoverTrigger asChild>
-                        <Button className="w-full bg-blue-500 hover:bg-blue-600">
-                          <CalendarIcon />
-                          {returnDate ? (
-                            format(returnDate, "PPP", { locale: dateFnsLocale })
-                          ) : (
-                            <span>{t("pickDate")}</span>
-                          )}
-                        </Button>
-                      </PopoverTrigger>
-                      <PopoverContent className="p-0 w-auto">
-                        <Calendar
-                          locale={dateFnsLocale}
-                          mode="single"
-                          selected={returnDate}
-                          onSelect={(date) => {
-                            setReturnDate(date);
-                            setOpenReturn(false);
-                          }}
-                          // ✅ Disable past + before startDate
-                          disabled={(date) =>
-                            isPast(date) ||
-                            (pickupDate ? date < pickupDate : false)
-                          }
-                          modifiersClassNames={{
-                            disabled:
-                              "[&>button]:opacity-50 pointer-events-none",
-                          }}
-                          className="rounded-lg border shadow-sm"
-                        />
-                      </PopoverContent>
-                    </Popover>
-                  </div>
-                </div>
-                <DialogFooter className="mt-2">
-                  <DialogClose asChild>
-                    <Button variant="outline">{t("cancel")}</Button>
-                  </DialogClose>
-                  <Button
-                    type="submit"
-                    className="bg-blue-500 hover:bg-blue-600 text-white cursor-pointer"
-                    disabled={isSubmitting}
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                        {t("booking")}
-                      </>
-                    ) : (
-                      t("bookNow")
-                    )}
-                  </Button>
-                </DialogFooter>
-              </form>
-            </DialogContent>
-          </Dialog>
+                  <DialogFooter className="mt-2">
+                    <DialogClose asChild>
+                      <Button variant="outline">{t("cancel")}</Button>
+                    </DialogClose>
+                    <Button
+                      type="submit"
+                      className="bg-blue-500 hover:bg-blue-600 text-white cursor-pointer"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                          {t("booking")}
+                        </>
+                      ) : (
+                        t("bookNow")
+                      )}
+                    </Button>
+                  </DialogFooter>
+                </form>
+              </DialogContent>
+            </Dialog>
+          </div>
         </div>
       </div>
     </div>
