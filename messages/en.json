@@ -25,9 +25,10 @@
     "features": "Features",
     "perDay": "per day",
     "bookNow": "Book Now",
-    "cardTitle": "Book the car",
-    "cardDescription-1": "Fill the form with your information.",
-    "cardDescription-2": "We will contact you as soon as possible.",
+    "bookNowWhatsapp": "Via WhatsApp",
+    "cardTitle": "Reserve Your Car Now",
+    "cardDescription-1": "Fill in your details - it takes less than a minute. We’ll contact you soon to confirm and simplify your ride.",
+    "cardDescription-2": "",
     "fullname": "Fullname",
     "phone": "Phone Number",
     "pickupLocation": "Pick up Location",
@@ -48,15 +49,40 @@
       "Diesel": "Diesel",
       "Essence": "Gasoline",
       "Electrique": "Electric"
+    },
+    "WhatsAppBooking": {
+      "request": "New Booking Request",
+      "car": "Car",
+      "price": "Price",
+      "confirm": "Please can you confirm the booking ?",
+      "day": "day"
     }
   },
   "footer": {
     "contactUs": "Need help? Call Us Now..."
   },
   "loader": {
-    "pageLoader": "Getting your ride ready..."
+    "pageLoader": "Just a second… Warming up the engine and finding your perfect car."
   },
   "metadata": {
     "description": "Exploring Morocco is now fast, simple, and just a click away. Book your ride in on click."
+  },
+  "hero2": {
+    "hook": "Rent a Car at Casablanca Airport.",
+    "subhook": "Starting from 250 MAD/Day.",
+    "checkMark-1": "Free Airport Delivery.",
+    "checkMark-2": "Full Insurance Coverage.",
+    "checkMark-3": "Instant Booking via WhatsApp.",
+    "land&drive": "\"✈️ Land & Drive - No Hassle, No Waiting.\"",
+    "explore": "Explore Cars & Book Instantly",
+    "features": {
+      "f1": "Free Airport Delivery",
+      "f2": "Pay on Delivery",
+      "f3": "Full Insurance",
+      "f4": "24/7 WhatsApp Support"
+    }
+  },
+  "support": {
+    "WhatsApp": "Hello 👋, I would like to get more information about your car rental service. Can you help me?"
   }
 }

@@ -34,7 +34,7 @@ export async function POST(req: Request) {
           <li><strong>Type:</strong> ${body.carType}</li>
           <li><strong>Pickup:</strong> ${body.pickupLocation} — ${body.pickupDate}</li>
           <li><strong>Return:</strong> ${body.returnLocation} — ${body.returnDate}</li>
-          <li><strong>Price:</strong> ${body.price} Dhs/day</li>
+          <li><strong>Price:</strong> ${body.price} MAD/day</li>
         </ul>
       `,
       });

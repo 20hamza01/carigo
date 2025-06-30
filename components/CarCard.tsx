@@ -24,6 +24,7 @@ import { redirect } from "next/navigation";
 import { toast } from "sonner";
 import { useLocale, useTranslations } from "next-intl";
 import { enUS, fr } from "date-fns/locale";
+import Link from "next/link";
 
 interface CarCardProps {
   carClass: string;
@@ -113,6 +114,15 @@ export default function CarCard({
     }
   };
 
+  const whatsaapMessage = `
+    *${t("WhatsAppBooking.request")}*
+
+    🚗 *${t("WhatsAppBooking.car")}* ${brand}
+    💰 *${t("WhatsAppBooking.price")}:* ${price} MAD/${t("WhatsAppBooking.day")}
+
+${t("WhatsAppBooking.confirm")}`;
+
+  const encodedMessage = encodeURIComponent(whatsaapMessage);
   return (
     <div className="rounded-xl shadow-md overflow-hidden bg-white w-full max-w-sm h-full">
       <div className="bg-gray-100 p-2 h-[200px] flex items-center justify-center">
@@ -125,7 +135,7 @@ export default function CarCard({
         />
       </div>
 
-      <div className="h-[230px] py-4 space-y-2 flex flex-col justify-between align-middle my-2">
+      <div className="h-[250px] py-4 space-y-2 flex flex-col justify-between align-middle my-2">
         <div className="flex gap-6 items-center px-2">
           <div className="flex items-center justify-between flex-col flex-1">
             <h3 className="text-md font-semibold text-center">{carClass}</h3>
@@ -149,20 +159,20 @@ export default function CarCard({
 
         <Separator />
         <div className="flex items-center gap-6 py-2 px-3">
-          <div className="flex-1 flex flex-col items-center">
-            <p className="text-lg font-bold">{price} Dhs</p>
+          <div className="flex-1 flex flex-col items-center justify-center">
+            <p className="text-lg font-bold">{price} MAD</p>
             <p className="text-xs text-gray-500">{t("perDay")}</p>
           </div>
-          <div className="flex flex-col items-center flex-1">
+          <div className="flex flex-col items-center flex-1 gap-4">
             <Dialog open={openDialog} onOpenChange={setOpenDialog}>
               <DialogTrigger asChild className="">
-                <Button className="bg-blue-500 hover:bg-blue-600 text-white px-2 w-full mr-3">
+                <Button className="bg-blue-500 hover:bg-blue-600 text-white px-2 w-full">
                   {t("bookNow")}
                 </Button>
               </DialogTrigger>
               <DialogContent className="sm:max-w-[425px]">
                 <form onSubmit={handleSubmit} className="grid gap-4">
-                  <DialogHeader>
+                  <DialogHeader className="pt-4">
                     <DialogTitle className="text-start">
                       {t("cardTitle")}
                     </DialogTitle>
@@ -287,6 +297,7 @@ export default function CarCard({
                     <DialogClose asChild>
                       <Button variant="outline">{t("cancel")}</Button>
                     </DialogClose>
+
                     <Button
                       type="submit"
                       className="bg-blue-500 hover:bg-blue-600 text-white cursor-pointer"
@@ -305,6 +316,20 @@ export default function CarCard({
                 </form>
               </DialogContent>
             </Dialog>
+            <Link
+              href={`https://wa.me/212715192639?text=${encodedMessage}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="bg-green-500 hover:bg-green-600 text-white px-4 w-full mr-3">
+                <img
+                  src="/whatsapp-icon.png"
+                  alt="WhatsApp"
+                  className="w-6 h-6"
+                />
+                {t("bookNowWhatsapp")}
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

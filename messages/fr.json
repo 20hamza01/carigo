@@ -25,9 +25,10 @@
     "features": "Caractéristiques",
     "perDay": "par jour",
     "bookNow": "Réserver maintenant",
-    "cardTitle": "Réservez la voiture",
-    "cardDescription-1": "Remplissez le formulaire avec vos informations.",
-    "cardDescription-2": "Nous vous contacterons dès que possible.",
+    "bookNowWhatsapp": "Sur WhatsApp",
+    "cardTitle": "Réservez votre voiture maintenant",
+    "cardDescription-1": "Remplissez vos infos en moins d’une minute. Nous vous contacterons bientôt pour confirmer et faciliter votre trajet.",
+    "cardDescription-2": "",
     "fullname": "Nom complet",
     "phone": "Numéro de téléphone",
     "pickupLocation": "Lieu de récupération",
@@ -48,15 +49,40 @@
       "Diesel": "Diesel",
       "Essence": "Essence",
       "Electrique": "Électrique"
+    },
+    "WhatsAppBooking": {
+      "request": "Nouvelle demande de réservation",
+      "car": "Voiture",
+      "price": "Prix",
+      "confirm": "Pouvez-vous confirmer la réservation, s'il vous plaît ?",
+      "day": "jour"
     }
   },
   "footer": {
     "contactUs": "Besoin d’aide ? Appelez-nous maintenant..."
   },
   "loader": {
-    "pageLoader": "Préparation de votre voiture..."
+    "pageLoader": "Juste une seconde... On chauffe le moteur et on trouve votre voiture parfaite."
   },
   "metadata": {
     "description": "Explorer le Maroc est désormais rapide, simple et à un seul clic. Réservez votre voiture en un clic."
+  },
+  "hero2": {
+    "hook": "Louez une voiture à l’aéroport de Casablanca.",
+    "subhook": "À partir de 250 MAD/jour.",
+    "checkMark-1": "Livraison gratuite à l’aéroport.",
+    "checkMark-2": "Assurance complète incluse.",
+    "checkMark-3": "Réservation instantanée via WhatsApp.",
+    "land&drive": "\"✈️ Atterrissez & Roulez - Sans problèmes, sans attente.\"",
+    "explore": "Voir les voitures & réserver maintenant",
+    "features": {
+      "f1": "Livraison gratuite à l'aéroport",
+      "f2": "Paiement à la livraison",
+      "f3": "Assurance tous risques",
+      "f4": "Assistance WhatsApp 24h/24 et 7j/7"
+    }
+  },
+  "support": {
+    "WhatsApp": "Bonjour 👋, je souhaite avoir plus d'informations concernant votre service de location de voitures. Pouvez-vous m'aider ?"
   }
 }

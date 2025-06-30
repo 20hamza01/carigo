@@ -7,16 +7,52 @@ import EconomicCars from "@/components/EconomicCars";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import PageLoader from "@/components/PageLoader";
 import { useTranslations } from "next-intl";
-import { Car, Phone } from "lucide-react";
+import {
+  Car,
+  ChevronDown,
+  ChevronUp,
+  CircleCheckBig,
+  ClockFading,
+  HandCoins,
+  ShieldCheck,
+  Truck,
+} from "lucide-react";
 import LocaleSwitcher from "@/components/LocalSwitcher";
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
+import { useRef } from "react";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
 
   const t = useTranslations("footer");
+  const tHero1 = useTranslations("hero");
+  const tHero2 = useTranslations("hero2");
+
+  const [open, setOpen] = useState(false);
+  const touchStartY = useRef<number | null>(null);
+
+  const tSupport = useTranslations("support");
+
+  const helloMessage = tSupport("WhatsApp");
+
+  // Encode message for URL
+  const encodedMessage = useMemo(
+    () => encodeURIComponent(helloMessage),
+    [helloMessage]
+  );
+
+  const whatsappLink = `https://wa.me/212715192639?text=${encodedMessage}`;
 
   useEffect(() => {
     // simulate loading delay (e.g., wait for font load, image decode, etc.)
@@ -34,6 +70,18 @@ export default function Home() {
           <PageLoader />
         ) : (
           <div className="min-h-screen bg-gradient-to-br from-sky-200 via-blue-100 to-indigo-200 relative overflow-hidden">
+            <Link
+              href={whatsappLink} // Replace with your WhatsApp number
+              target="_blank"
+              rel="noopener noreferrer"
+              className="animate-pulse fixed bottom-10 right-6 z-90 bg-green-500 hover:bg-green-600 text-white p-2 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center"
+            >
+              <img
+                src="/whatsapp-icon.png"
+                alt="WhatsApp"
+                className="w-10 h-10"
+              />
+            </Link>
             <Navbar />
 
             <Hero />
@@ -64,9 +112,22 @@ export default function Home() {
         {loading ? (
           <PageLoader />
         ) : (
-          <div className="min-h-screen bg-gradient-to-tr from-blue-900 via-blue-600 to-blue-300">
+          // <div className="min-h-screen bg-gradient-to-tr from-blue-900 via-blue-600 to-blue-300">
+          <div className="min-h-screen bg-gradient-to-b from-blue-800 via-blue-500 to-blue-200">
+            <Link
+              href={whatsappLink} // Replace with your WhatsApp number
+              target="_blank"
+              rel="noopener noreferrer"
+              className="animate-pulse fixed bottom-10 right-6 z-90 bg-green-500 hover:bg-green-600 text-white p-2 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center"
+            >
+              <img
+                src="/whatsapp-icon.png"
+                alt="WhatsApp"
+                className="w-10 h-10"
+              />
+            </Link>
             {/* NAV */}
-            <div className="flex justify-between items-center mx-4 py-8">
+            <div className="flex justify-between items-center mx-4 pb-4 pt-12">
               <div className="flex justify-between items-center gap-2">
                 <Car className="text-white h-12 w-12" />
                 <p className="text-3xl font-extrabold text-white">CariGO</p>
@@ -77,39 +138,116 @@ export default function Home() {
             </div>
 
             {/* BODY */}
-            <div className="absolute min-h-screen w-full bg-white rounded-4xl top-30 shadow-[0_-8px_12px_rgba(0,0,0,0.2)]">
-              <div className="flex flex-col justify-center items-start">
-                {/* ECONOMIC CARS */}
-                <div className="w-full">
-                  <EconomicCars />
+            <Drawer open={open} onOpenChange={setOpen}>
+              <div className="mx-4 mt-6 flex flex-col gap-4 items-center mb-24">
+                <div className="p-6 flex flex-col gap-6 flex-1 justify-between">
+                  <p className="text-3xl font-semibold text-white flex-1">
+                    {tHero2("hook")}
+                  </p>
+                  <p className="text-2xl font-bold text-blue-500 flex-1 rounded-lg bg-white flex justify-center items-center px-1 shadow">
+                    {tHero2("subhook")}
+                  </p>
                 </div>
 
-                <Separator className="mt-8" />
-
-                {/* MIDCLASS CARS */}
-                <div className="w-full">
-                  <MidClassCars />
+                <div className="flex flex-col justify-between gap-2 px-2 py-4 flex-1">
+                  <div className="flex items-center gap-4 font-semibold text-white text-lg">
+                    <CircleCheckBig />
+                    {tHero2("checkMark-1")}
+                  </div>
+                  <div className="flex items-center gap-4 font-semibold text-white text-lg">
+                    <CircleCheckBig />
+                    {tHero2("checkMark-2")}
+                  </div>
+                  <div className="flex items-center gap-4 font-semibold text-white text-lg">
+                    <CircleCheckBig />
+                    {tHero2("checkMark-3")}
+                  </div>
                 </div>
-
-                <Separator className="mt-8" />
-
-                {/* LUXURIOUS CARS */}
-                <div className="w-full">
-                  <LuxuriousCars />
+                <div className="flex flex-col gap-4 flex-1 bg-white rounded-2xl p-4 px-6 w-full">
+                  <div className="flex flex-1 gap-4 items-start p-0 text-blue-500">
+                    <Truck className="h-6 w-6" />
+                    <p className="font-semibold">{tHero2("features.f1")}</p>
+                  </div>
+                  <div className="flex flex-1 gap-4 items-start p-0 text-blue-500">
+                    <HandCoins className="h-6 w-6" />
+                    <p className="font-semibold">{tHero2("features.f2")}</p>
+                  </div>
+                  <div className="flex flex-1 gap-4 items-start p-0 text-blue-500">
+                    <ShieldCheck className="h-6 w-6" />
+                    <p className="font-semibold">{tHero2("features.f3")}</p>
+                  </div>
+                  <div className="flex flex-1 gap-4 items-start p-0 text-blue-500">
+                    <ClockFading className="h-6 w-6" />
+                    <p className="font-semibold">{tHero2("features.f4")}</p>
+                  </div>
+                </div>
+                <div className="flex justify-center items-center font-semibold text-white text-lg italic text-center py-4 flex-1">
+                  {tHero2("land&drive")}
                 </div>
               </div>
-              <Separator className="mt-8" />
-              <div className="flex items-center justify-center gap-3 bg-gradient-to-tr from-blue-900 via-blue-600 to-blue-300">
-                <Phone className="w-4 h-4 text-white" />
 
-                <Link
-                  href="tel:+212715192639"
-                  className="text-sm font-bold text-white py-4"
+              <DrawerTrigger>
+                <div
+                  className="fixed bottom-0 w-full bg-white rounded-t-4xl shadow-lg p-4 z-50"
+                  onTouchStart={(e) => {
+                    touchStartY.current = e.touches[0].clientY;
+                  }}
+                  onTouchEnd={(e) => {
+                    if (
+                      touchStartY.current &&
+                      touchStartY.current - e.changedTouches[0].clientY > 50
+                    ) {
+                      setOpen(true); // open drawer on swipe up
+                    }
+                    touchStartY.current = null;
+                  }}
                 >
-                  {t("contactUs")}
-                </Link>
-              </div>
-            </div>
+                  <div className="flex flex-col justify-center items-center gap-2 w-full pt-2">
+                    <ChevronUp className="text-white bg-blue-500 rounded-full p-1 animate-bounce" />
+                    <p className="text-xl font-semibold text-blue-500 text-center">
+                      {tHero2("explore")}
+                    </p>
+                  </div>
+                </div>
+              </DrawerTrigger>
+
+              <DrawerContent>
+                <DrawerHeader>
+                  <DrawerTitle className="flex flex-col items-center gap-2">
+                    <DrawerClose className="flex-1">
+                      <ChevronDown className="text-white bg-blue-500 rounded-full p-1" />
+                    </DrawerClose>
+                    <p className="flex-1 text-blue-500">{tHero1("explore")}</p>
+                  </DrawerTitle>
+                  <DrawerDescription>{tHero1("subhook")}</DrawerDescription>
+                </DrawerHeader>
+                {/* <div className="absolute min-h-screen w-full bg-white rounded-4xl top-30 shadow-[0_-8px_12px_rgba(0,0,0,0.2)]"> */}
+                <div className="mx-auto w-full overflow-y-scroll">
+                  <div className="flex flex-col justify-center items-start">
+                    {/* ECONOMIC CARS */}
+                    <div className="w-full">
+                      <EconomicCars />
+                    </div>
+
+                    <Separator className="mt-8" />
+
+                    {/* MIDCLASS CARS */}
+                    <div className="w-full">
+                      <MidClassCars />
+                    </div>
+
+                    <Separator className="mt-8" />
+
+                    {/* LUXURIOUS CARS */}
+                    <div className="w-full">
+                      <LuxuriousCars />
+                    </div>
+                  </div>
+                  <Separator className="mt-8" />
+                </div>
+                {/* </div> */}
+              </DrawerContent>
+            </Drawer>
           </div>
         )}
       </div>
