@@ -322,7 +322,9 @@ ${t("WhatsAppBooking.confirm")}`;
               rel="noopener noreferrer"
             >
               <Button className="bg-green-500 hover:bg-green-600 text-white px-4 w-full mr-3">
-                <img
+                <Image
+                  width={100}
+                  height={100}
                   src="/whatsapp-icon.png"
                   alt="WhatsApp"
                   className="w-6 h-6"

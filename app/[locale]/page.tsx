@@ -31,6 +31,7 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { useRef } from "react";
+import Image from "next/image";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -74,9 +75,11 @@ export default function Home() {
               href={whatsappLink} // Replace with your WhatsApp number
               target="_blank"
               rel="noopener noreferrer"
-              className="animate-pulse fixed bottom-10 right-6 z-90 bg-green-500 hover:bg-green-600 text-white p-2 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center"
+              className="animate-pulse fixed bottom-10 right-6 bg-green-500 z-590 hover:bg-green-600 text-white p-2 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center"
             >
-              <img
+              <Image
+                width={100}
+                height={100}
                 src="/whatsapp-icon.png"
                 alt="WhatsApp"
                 className="w-10 h-10"
@@ -118,9 +121,11 @@ export default function Home() {
               href={whatsappLink} // Replace with your WhatsApp number
               target="_blank"
               rel="noopener noreferrer"
-              className="animate-pulse fixed bottom-10 right-6 z-90 bg-green-500 hover:bg-green-600 text-white p-2 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center"
+              className="pointer-events-auto animate-pulse fixed bottom-10 right-6 z-[9999] bg-green-500 hover:bg-green-600 text-white p-2 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center"
             >
-              <img
+              <Image
+                width={100}
+                height={100}
                 src="/whatsapp-icon.png"
                 alt="WhatsApp"
                 className="w-10 h-10"
@@ -211,7 +216,7 @@ export default function Home() {
                 </div>
               </DrawerTrigger>
 
-              <DrawerContent>
+              <DrawerContent className="pointer-events-none">
                 <DrawerHeader>
                   <DrawerTitle className="flex flex-col items-center gap-2">
                     <DrawerClose className="flex-1">
