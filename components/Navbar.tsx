@@ -12,8 +12,8 @@ const Navbar = () => {
       {/* LEFT SIDE */}
       <div className="flex justify-between items-center bg-transparent mx-4 mt-2 pt-4">
         <div className="flex justify-between items-center gap-4 sm:ml-8">
-          <Car className="h-8 w-8 lg:h-14 lg:w-14 text-blue-500" />
-          <p className="font-bold text-3xl lg:text-4xl text-blue-500">CariGo</p>
+          <Car className="h-8 w-8 lg:h-14 lg:w-14 text-white" />
+          <p className="font-bold text-3xl lg:text-4xl text-white">CariGo</p>
         </div>
 
         {/* RIGHT SIDE */}
@@ -31,9 +31,9 @@ const Navbar = () => {
             </Popover>
           </div>
 
-          <div className="hidden md:flex justify-between items-center gap-2 my-6 bg-blue-500 rounded-md px-4 py-1">
-            <MapPin className="w-4 h-4 text-white" />
-            <p className="font-bold text-white">{t("country")}</p>
+          <div className="hidden md:flex justify-between items-center gap-2 my-6 bg-white rounded-md px-4 py-1">
+            <MapPin className="w-4 h-4 text-blue-500" />
+            <p className="font-bold text-blue-500">{t("country")}</p>
           </div>
 
           <div className="bg-white rounded-xl">

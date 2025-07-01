@@ -1,5 +1,4 @@
 import React from "react";
-import Carousel from "./Carousel";
 import CarCard from "./CarCard";
 import { useTranslations } from "next-intl";
 import { cars } from "@/lib/carData";
@@ -12,34 +11,11 @@ const EconomicCars = () => {
   return (
     <>
       <div className="flex flex-col justify-between items-center gap-6">
-        <h2 className="hidden md:block text-3xl font-bold text-gray-900 text-center">
-          {t("economic-title")}
-        </h2>
-
-        {/* DESKTOP VIEW */}
-        <div className="hidden md:block">
-          <Carousel>
-            {economicCars.map((car, index) => (
-              <div className="p-1" key={`${car.brand}-${car.model}-${index}`}>
-                <CarCard
-                  carClass={t("economic")}
-                  brand={`${car.brand} ${car.model}`}
-                  price={car.pricePerDay}
-                  image={car.image || "/hero.png"}
-                  carType={car.carType}
-                  fuel={car.fuel}
-                />
-              </div>
-            ))}
-          </Carousel>
-        </div>
-
-        {/* MOBILE VIEW */}
         <div className="w-full py-2 mt-4">
-          <h2 className="block md:hidden text-2xl font-bold text-blue-500 py-4 px-4">
+          <h2 className="md:text-3xl md:text-center text-2xl font-bold text-blue-500 py-4 px-4">
             {t("economic-title")}
           </h2>
-          <div className="block md:hidden w-full px-2">
+          <div className="w-full px-2">
             <div className="flex gap-12 overflow-x-scroll bg-transparent rounded-xl m-2">
               {economicCars.map((car, index) => (
                 <div
