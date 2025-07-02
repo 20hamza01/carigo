@@ -71,13 +71,13 @@
     "hook1": "Rent a Car in Casablanca.",
     "hook2": "Airport & Citywide.",
     "subhook": "Starting from 250 MAD/Day.",
-    "checkMark-1": "Free Airport Delivery.",
+    "checkMark-1": "Free Car Delivery.",
     "checkMark-2": "Full Insurance Coverage.",
     "checkMark-3": "Instant Booking via WhatsApp.",
     "land&drive": "\"✈️ Land & Drive - No Hassle, No Waiting.\"",
     "explore": "Explore Cars & Book Instantly",
     "features": {
-      "f1": "Free Airport Delivery",
+      "f1": "Free Car Delivery.",
       "f2": "Pay on Delivery",
       "f3": "Full Insurance",
       "f4": "24/7 WhatsApp Support"
