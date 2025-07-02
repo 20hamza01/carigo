@@ -7,6 +7,7 @@ import "./globals.css";
 import { Locale, routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { getMessages, getTranslations } from "next-intl/server";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const play = Play({
   variable: "--font-play",
@@ -86,6 +87,7 @@ export default async function RootLayout({
       <body className={`${play.variable}`}>
         <NextIntlClientProvider messages={messages}>
           {children}
+          <GoogleAnalytics gaId="G-RZ03P8YM8W" />
           <Toaster />
         </NextIntlClientProvider>
       </body>
