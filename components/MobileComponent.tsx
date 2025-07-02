@@ -79,11 +79,22 @@ const MobileComponent = () => {
         {/* BODY */}
         <Drawer open={open} onOpenChange={setOpen}>
           <div className="mx-4 mt-6 flex flex-col gap-4 items-center mb-24">
-            <div className="p-6 flex flex-col gap-6 flex-1 justify-between">
-              <p className="text-3xl font-semibold text-white flex-1">
-                {tHero2("hook")}
-              </p>
-              <p className="text-2xl font-bold text-blue-500 flex-1 rounded-lg bg-white flex justify-center items-center p-1 shadow text-center">
+            <div className="py-6 px-3 flex flex-col gap-12 flex-1 justify-between">
+              <div className="flex flex-col gap-2">
+                <p
+                  style={{ letterSpacing: "-1.6px" }}
+                  className="text-3xl font-semibold text-white flex-1"
+                >
+                  {tHero2("hook1")}
+                </p>
+                <p
+                  style={{ letterSpacing: "-1.6px" }}
+                  className="text-3xl font-semibold text-white flex-1"
+                >
+                  {tHero2("hook2")}
+                </p>
+              </div>
+              <p className="text-2xl font-bold text-blue-500 flex-1 rounded-lg bg-white flex justify-center items-center p-2 shadow text-center">
                 {tHero2("subhook")}
               </p>
             </div>

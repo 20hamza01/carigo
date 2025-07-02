@@ -20,25 +20,33 @@ const Hero = () => {
         <div className="flex gap-12 w-full">
           {/* LEFT */}
           <div className="flex flex-col gap-24 py-12 w-full">
-            <div className="flex gap-32">
-              <div className="py-6 flex flex-col gap-24 justify-center w-3/5">
-                <p
-                  style={{ letterSpacing: "-1.6px" }}
-                  className="text-7xl font-semibold text-white"
-                >
-                  {tHero2("hook")}
-                </p>
-                <p className="text-4xl font-bold text-blue-500 rounded-lg bg-white flex justify-center items-center px-1 py-2 shadow p-1 text-center">
+            <div className="flex">
+              <div className="py-6 flex flex-col gap-24 justify-center w-6/10">
+                <div className="flex flex-col gap-4">
+                  <p
+                    style={{ letterSpacing: "-1.6px" }}
+                    className="text-6xl font-semibold text-white"
+                  >
+                    {tHero2("hook1")}
+                  </p>
+                  <p
+                    style={{ letterSpacing: "-1.6px" }}
+                    className="text-6xl font-semibold text-white"
+                  >
+                    {tHero2("hook2")}
+                  </p>
+                </div>
+                <p className="text-4xl font-bold text-blue-500 rounded-lg bg-white flex justify-center items-center p-2 shadow text-center w-3/4">
                   {tHero2("subhook")}
                 </p>
               </div>
-              <div className="w-2/5 pt-42">
+              <div className="w-4/10 pt-42">
                 <div className="relative z-10">
                   <Image
                     src="/hero.png"
                     alt="Blue Mercedes-Benz car"
-                    width={600}
-                    height={400}
+                    width={1000}
+                    height={600}
                     className="w-full h-auto"
                   />
                 </div>

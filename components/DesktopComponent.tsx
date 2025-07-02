@@ -24,6 +24,8 @@ const DesktopComponent = () => {
   return (
     <>
       <div className="min-h-screen bg-gradient-to-br from-blue-800 via-blue-500 to-blue-200 relative overflow-hidden">
+        <div className="rounded-full bg-white/9 absolute h-[700px] w-[700px] right-[-100px] top-[-100px]"></div>
+        <div className="rounded-full bg-white/9 absolute h-[700px] w-[700px] left-[-350px] top-160"></div>
         <Link
           href={whatsappLink}
           target="_blank"
@@ -38,7 +40,9 @@ const DesktopComponent = () => {
             className="w-10 h-10"
           />
         </Link>
-        <Navbar />
+        <div className="relative z-10">
+          <Navbar />
+        </div>
 
         <Hero />
 

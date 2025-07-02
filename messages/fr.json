@@ -68,7 +68,8 @@
     "description": "Explorer le Maroc est désormais rapide, simple et à un seul clic. Réservez votre voiture en un clic."
   },
   "hero2": {
-    "hook": "Louez une voiture à l’aéroport de Casablanca.",
+    "hook1": "Louez une voiture à Casablanca.",
+    "hook2": "Aéroport & partout en ville.",
     "subhook": "À partir de 250 MAD/jour.",
     "checkMark-1": "Livraison gratuite à l’aéroport.",
     "checkMark-2": "Assurance complète incluse.",

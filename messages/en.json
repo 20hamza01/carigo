@@ -68,7 +68,8 @@
     "description": "Exploring Morocco is now fast, simple, and just a click away. Book your ride in on click."
   },
   "hero2": {
-    "hook": "Rent a Car at Casablanca Airport.",
+    "hook1": "Rent a Car in Casablanca.",
+    "hook2": "Airport & Citywide.",
     "subhook": "Starting from 250 MAD/Day.",
     "checkMark-1": "Free Airport Delivery.",
     "checkMark-2": "Full Insurance Coverage.",
