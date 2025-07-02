@@ -68,7 +68,7 @@ export const cars: Car[] = [
     pricePerDay: 750,
     image: "/cars/hyundai-tucson.png",
     carType: "Automatic",
-    fuel: "Essence",
+    fuel: "Diesel",
   },
   {
     class: "Mid-Class",
@@ -77,7 +77,7 @@ export const cars: Car[] = [
     pricePerDay: 750,
     image: "/cars/t-roc.png",
     carType: "Automatic",
-    fuel: "Essence",
+    fuel: "Diesel",
   },
   {
     class: "Mid-Class",
