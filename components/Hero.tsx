@@ -22,7 +22,10 @@ const Hero = () => {
           <div className="flex flex-col gap-24 py-12 w-full">
             <div className="flex gap-32">
               <div className="py-6 flex flex-col gap-24 justify-center w-3/5">
-                <p className="text-7xl font-semibold text-white">
+                <p
+                  style={{ letterSpacing: "-1.6px" }}
+                  className="text-7xl font-semibold text-white"
+                >
                   {tHero2("hook")}
                 </p>
                 <p className="text-4xl font-bold text-blue-500 rounded-lg bg-white flex justify-center items-center px-1 py-2 shadow">
