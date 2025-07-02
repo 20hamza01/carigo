@@ -83,7 +83,7 @@ const MobileComponent = () => {
               <p className="text-3xl font-semibold text-white flex-1">
                 {tHero2("hook")}
               </p>
-              <p className="text-2xl font-bold text-blue-500 flex-1 rounded-lg bg-white flex justify-center items-center px-1 shadow">
+              <p className="text-2xl font-bold text-blue-500 flex-1 rounded-lg bg-white flex justify-center items-center p-1 shadow text-center">
                 {tHero2("subhook")}
               </p>
             </div>

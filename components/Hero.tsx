@@ -28,7 +28,7 @@ const Hero = () => {
                 >
                   {tHero2("hook")}
                 </p>
-                <p className="text-4xl font-bold text-blue-500 rounded-lg bg-white flex justify-center items-center px-1 py-2 shadow">
+                <p className="text-4xl font-bold text-blue-500 rounded-lg bg-white flex justify-center items-center px-1 py-2 shadow p-1 text-center">
                   {tHero2("subhook")}
                 </p>
               </div>
