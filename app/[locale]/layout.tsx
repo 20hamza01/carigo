@@ -45,7 +45,7 @@ export async function generateMetadata({
       canonical: canonicalUrl,
     },
     icons: {
-      icon: "/favicon-v2.ico",
+      icon: "/favicon.ico",
     },
     openGraph: {
       title: "Carigo",
@@ -84,6 +84,9 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
       <body className={`${play.variable}`}>
         <NextIntlClientProvider messages={messages}>
           {children}
