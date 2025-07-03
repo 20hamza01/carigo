@@ -169,7 +169,6 @@ const MobileComponent = () => {
                 </DrawerClose>
                 <p className="flex-1 text-blue-500">{tHero1("explore")}</p>
               </DrawerTitle>
-              <DrawerDescription>{tHero1("subhook")}</DrawerDescription>
             </DrawerHeader>
             {/* <div className="absolute min-h-screen w-full bg-white rounded-4xl top-30 shadow-[0_-8px_12px_rgba(0,0,0,0.2)]"> */}
             <div className="mx-auto w-full overflow-y-scroll">

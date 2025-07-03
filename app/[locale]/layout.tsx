@@ -40,7 +40,7 @@ export async function generateMetadata({
     metadataBase: new URL(baseUrl), //Required for relative URLs below
     title: "Carigo",
     description:
-      "Explorer le Maroc est maintenant simple et rapide. Réservez votre voiture en un clic – Exploring Morocco is now fast and easy. Book your car in just one click.",
+      "Louez une voiture à Casablanca, Aéroport & partout en ville. Explorer le Maroc est maintenant simple et rapide – Rent a Car in Casablanca, Airport & Citywide. Exploring Morocco is now fast and easy.",
     alternates: {
       canonical: canonicalUrl,
     },
@@ -50,7 +50,7 @@ export async function generateMetadata({
     openGraph: {
       title: "Carigo",
       description:
-        "Explorer le Maroc est maintenant simple et rapide. Réservez votre voiture en un clic – Exploring Morocco is now fast and easy. Book your car in just one click.",
+        "Louez une voiture à Casablanca, Aéroport & partout en ville. Explorer le Maroc est maintenant simple et rapide – Rent a Car in Casablanca, Airport & Citywide. Exploring Morocco is now fast and easy.",
       url: canonicalUrl,
       siteName: "Carigo",
       images: [
