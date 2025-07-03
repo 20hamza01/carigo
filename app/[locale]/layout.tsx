@@ -26,7 +26,7 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  const baseUrl = "https://carigo.vercel.app";
+  const baseUrl = "https://www.carigo.ma";
   const { locale } = await params;
   const canonicalUrl = `${baseUrl}/${locale}`;
 
