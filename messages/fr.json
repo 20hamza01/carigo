@@ -85,5 +85,10 @@
   },
   "support": {
     "WhatsApp": "Bonjour 👋, je souhaite avoir plus d'informations concernant votre service de location de voitures. Pouvez-vous m'aider ?"
+  },
+  "notFound": {
+    "title": "Page non trouvée",
+    "description": "Désolé, la page que vous recherchez n'existe pas.",
+    "goHome": "Retourner à l'accueil"
   }
 }

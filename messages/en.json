@@ -85,5 +85,10 @@
   },
   "support": {
     "WhatsApp": "Hello 👋, I would like to get more information about your car rental service. Can you help me?"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "Sorry, the page you are looking for does not exist.",
+    "goHome": "Go back to homepage"
   }
 }

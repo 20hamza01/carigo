@@ -23,22 +23,22 @@ const Hero = () => {
             <div className="flex">
               <div className="py-6 flex flex-col gap-24 justify-center w-6/10">
                 <div className="flex flex-col gap-4">
-                  <p
+                  <h1
                     style={{ letterSpacing: "-1.6px" }}
                     className="text-6xl font-semibold text-white"
                   >
                     {tHero2("hook1")}
-                  </p>
-                  <p
+                  </h1>
+                  <h1
                     style={{ letterSpacing: "-1.6px" }}
                     className="text-6xl font-semibold text-white"
                   >
                     {tHero2("hook2")}
-                  </p>
+                  </h1>
                 </div>
-                <p className="text-4xl font-bold text-blue-500 rounded-lg bg-white flex justify-center items-center p-2 shadow text-center w-3/4">
+                <h3 className="text-4xl font-bold text-blue-500 rounded-lg bg-white flex justify-center items-center p-2 shadow text-center w-3/4">
                   {tHero2("subhook")}
-                </p>
+                </h3>
               </div>
               <div className="w-4/10 pt-42">
                 <div className="relative z-10">

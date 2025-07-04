@@ -33,12 +33,17 @@ export async function generateMetadata({
   const ogImageUrl = locale === "en" ? "/og-image-en.png" : "/og-image-fr.png"; // fallback/default
   const ogImageAlt =
     locale === "en"
-      ? "Carigo – Rent a car in Morocco"
-      : "Carigo – Réserver votre voiture au Maroc"; // fallback/default
+      ? "Carigo | Rent a Car in Casablanca - Airport & Citywide."
+      : "Carigo | Louez une voiture à Casablanca - Aéroport & partout en ville."; // fallback/default
+
+  const title =
+    locale === "en"
+      ? "Carigo | Rent a Car in Casablanca - Airport & Citywide"
+      : "Carigo | Louez une voiture à Casablanca - Aéroport & partout en ville"; // fallback/default
 
   return {
     metadataBase: new URL(baseUrl), //Required for relative URLs below
-    title: "Carigo",
+    title: title,
     description:
       "Louez une voiture à Casablanca, Aéroport & partout en ville. Explorer le Maroc est maintenant simple et rapide – Rent a Car in Casablanca, Airport & Citywide. Exploring Morocco is now fast and easy.",
     alternates: {
@@ -48,7 +53,7 @@ export async function generateMetadata({
       icon: "/favicon.ico",
     },
     openGraph: {
-      title: "Carigo",
+      title: title,
       description:
         "Louez une voiture à Casablanca, Aéroport & partout en ville. Explorer le Maroc est maintenant simple et rapide – Rent a Car in Casablanca, Airport & Citywide. Exploring Morocco is now fast and easy.",
       url: canonicalUrl,
