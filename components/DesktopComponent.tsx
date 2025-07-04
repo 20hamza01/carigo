@@ -53,36 +53,15 @@ const DesktopComponent = () => {
           <Hero />
         </motion.div>
         <section className="px-6 pt-16 pb-24 bg-white" id="cars">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6 }}
-          >
-            <EconomicCars />
+          <EconomicCars />
 
-            <Separator className="mb-16 mt-32" />
-          </motion.div>
+          <Separator className="mb-16 mt-32" />
 
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6 }}
-          >
-            <MidClassCars />
+          <MidClassCars />
 
-            <Separator className="mb-16 mt-32" />
-          </motion.div>
+          <Separator className="mb-16 mt-32" />
 
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6 }}
-          >
-            <LuxuriousCars />
-          </motion.div>
+          <LuxuriousCars />
         </section>
       </div>
     </>
