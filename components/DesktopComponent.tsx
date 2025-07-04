@@ -25,33 +25,27 @@ const DesktopComponent = () => {
   return (
     <>
       <div className="min-h-screen bg-gradient-to-br from-blue-800 via-blue-500 to-blue-200 relative overflow-hidden">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+        <div className="rounded-full bg-white/9 absolute h-[700px] w-[700px] right-[-100px] top-[-100px]"></div>
+        <div className="rounded-full bg-white/9 absolute h-[700px] w-[700px] left-[-350px] top-160"></div>
+        <Link
+          href={whatsappLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="animate-pulse fixed bottom-10 right-6 bg-green-500 z-590 hover:bg-green-600 text-white p-2 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center"
         >
-          <div className="rounded-full bg-white/9 absolute h-[700px] w-[700px] right-[-100px] top-[-100px]"></div>
-          <div className="rounded-full bg-white/9 absolute h-[700px] w-[700px] left-[-350px] top-160"></div>
-          <Link
-            href={whatsappLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="animate-pulse fixed bottom-10 right-6 bg-green-500 z-590 hover:bg-green-600 text-white p-2 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center"
-          >
-            <Image
-              width={100}
-              height={100}
-              src="/whatsapp-icon.png"
-              alt="WhatsApp"
-              className="w-10 h-10"
-            />
-          </Link>
-          <div className="relative z-10">
-            <Navbar />
-          </div>
+          <Image
+            width={100}
+            height={100}
+            src="/whatsapp-icon.png"
+            alt="WhatsApp"
+            className="w-10 h-10"
+          />
+        </Link>
+        <div className="relative z-10">
+          <Navbar />
+        </div>
 
-          <Hero />
-        </motion.div>
+        <Hero />
         <section className="px-6 pt-16 pb-24 bg-white" id="cars">
           <EconomicCars />
 
