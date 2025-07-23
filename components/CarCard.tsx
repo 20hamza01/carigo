@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { CalendarIcon, Loader2, Coins, Target } from "lucide-react";
+import { CalendarIcon, Loader2, Coins, Gift } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -147,7 +147,7 @@ ${t("WhatsAppBooking.confirm")}`;
           </div>
 
           <div className="flex-1">
-            <p className="text-xs text-gray-500 mb-2 text-center">
+            <p className="text-xs text-gray-500 mb-2 text-center font-bold">
               {t("fidelityPoints")}
             </p>
             <div className="flex flex-col gap-1 justify-between text-sm text-gray-700">
@@ -158,7 +158,7 @@ ${t("WhatsAppBooking.confirm")}`;
                 </p>
               </div>
               <div className="flex items-center gap-1">
-                <Target className="w-4 h-4" />
+                <Gift className="w-4 h-4" />
                 {pointsNeededForRent} {t("pointsNeededForRent")}
               </div>
             </div>
