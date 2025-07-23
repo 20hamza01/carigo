@@ -29,6 +29,8 @@ const EconomicCars = () => {
                     image={car.image || "/hero.png"}
                     carType={car.carType}
                     fuel={car.fuel}
+                    pointsEarnedPerDay={car.pointsEarnedPerDay}
+                    pointsNeededForRent={car.pointsNeededForRent}
                   />
                 </div>
               ))}

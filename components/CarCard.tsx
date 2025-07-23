@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Fuel, Cog, CalendarIcon, Loader2 } from "lucide-react";
+import { CalendarIcon, Loader2, Coins, Target } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -25,6 +25,7 @@ import { toast } from "sonner";
 import { useLocale, useTranslations } from "next-intl";
 import { enUS, fr } from "date-fns/locale";
 import Link from "next/link";
+import { Ponnala } from "next/font/google";
 
 interface CarCardProps {
   carClass: string;
@@ -33,6 +34,8 @@ interface CarCardProps {
   fuel: "Diesel" | "Essence" | "Electrique";
   carType: "Manual" | "Automatic";
   image: string;
+  pointsEarnedPerDay: number;
+  pointsNeededForRent: number;
 }
 
 export default function CarCard({
@@ -42,6 +45,8 @@ export default function CarCard({
   fuel,
   carType,
   image, // fallback image
+  pointsEarnedPerDay,
+  pointsNeededForRent,
 }: CarCardProps) {
   const [pickupDate, setPickupDate] = useState<Date | undefined>(new Date());
   const [returnDate, setReturnDate] = useState<Date | undefined>(new Date());
@@ -143,15 +148,19 @@ ${t("WhatsAppBooking.confirm")}`;
           </div>
 
           <div className="flex-1">
-            <p className="text-xs text-gray-500 mb-2">{t("features")}</p>
+            <p className="text-xs text-gray-500 mb-2 text-center">
+              {t("fidelityPoints")}
+            </p>
             <div className="flex flex-col gap-1 justify-between text-sm text-gray-700">
               <div className="flex items-center gap-1">
-                <Fuel className="w-4 h-4" />
-                {t(`fuel.${fuel}`)}
+                <Coins className="w-4 h-4" />
+                <p>
+                  +{pointsEarnedPerDay} {t("pointsEarnedPerDay")}
+                </p>
               </div>
               <div className="flex items-center gap-1">
-                <Cog className="w-4 h-4" />
-                {t(`carType.${carType}`)}
+                <Target className="w-4 h-4" />
+                {pointsNeededForRent} {t("pointsNeededForRent")}
               </div>
             </div>
           </div>

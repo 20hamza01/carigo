@@ -10,6 +10,8 @@ interface Car {
   image: string;
   carType: CarType;
   fuel: FuelType;
+  pointsEarnedPerDay: number;
+  pointsNeededForRent: number;
 }
 
 export const cars: Car[] = [
@@ -22,6 +24,8 @@ export const cars: Car[] = [
     image: "/cars/peugeot-208.png",
     carType: "Manual",
     fuel: "Diesel",
+    pointsEarnedPerDay: 22,
+    pointsNeededForRent: 350,
   },
   {
     class: "Economic",
@@ -31,6 +35,8 @@ export const cars: Car[] = [
     image: "/cars/accent.png",
     carType: "Manual",
     fuel: "Diesel",
+    pointsEarnedPerDay: 22,
+    pointsNeededForRent: 500,
   },
   {
     class: "Economic",
@@ -40,6 +46,8 @@ export const cars: Car[] = [
     image: "/cars/clio5.png",
     carType: "Manual",
     fuel: "Diesel",
+    pointsEarnedPerDay: 22,
+    pointsNeededForRent: 350,
   },
   {
     class: "Economic",
@@ -49,6 +57,8 @@ export const cars: Car[] = [
     image: "/cars/dacia-Logan.png",
     carType: "Manual",
     fuel: "Diesel",
+    pointsEarnedPerDay: 22,
+    pointsNeededForRent: 300,
   },
   {
     class: "Economic",
@@ -58,6 +68,8 @@ export const cars: Car[] = [
     image: "/cars/citroen_c3.png",
     carType: "Manual",
     fuel: "Diesel",
+    pointsEarnedPerDay: 22,
+    pointsNeededForRent: 420,
   },
 
   // Mid-Class Cars
@@ -69,6 +81,8 @@ export const cars: Car[] = [
     image: "/cars/hyundai-tucson.png",
     carType: "Automatic",
     fuel: "Diesel",
+    pointsEarnedPerDay: 45,
+    pointsNeededForRent: 800,
   },
   {
     class: "Mid-Class",
@@ -78,6 +92,8 @@ export const cars: Car[] = [
     image: "/cars/t-roc.png",
     carType: "Automatic",
     fuel: "Diesel",
+    pointsEarnedPerDay: 45,
+    pointsNeededForRent: 800,
   },
   {
     class: "Mid-Class",
@@ -87,6 +103,8 @@ export const cars: Car[] = [
     image: "/cars/hyundai-creta.png",
     carType: "Automatic",
     fuel: "Essence",
+    pointsEarnedPerDay: 45,
+    pointsNeededForRent: 800,
   },
   {
     class: "Mid-Class",
@@ -96,6 +114,8 @@ export const cars: Car[] = [
     image: "/cars/Changan-C35-auto.png",
     carType: "Automatic",
     fuel: "Essence",
+    pointsEarnedPerDay: 45,
+    pointsNeededForRent: 650,
   },
   {
     class: "Mid-Class",
@@ -105,6 +125,8 @@ export const cars: Car[] = [
     image: "/cars/MG-ZS.png",
     carType: "Automatic",
     fuel: "Essence",
+    pointsEarnedPerDay: 45,
+    pointsNeededForRent: 750,
   },
   {
     class: "Mid-Class",
@@ -114,6 +136,8 @@ export const cars: Car[] = [
     image: "/cars/renault-arkana.png",
     carType: "Automatic",
     fuel: "Essence",
+    pointsEarnedPerDay: 45,
+    pointsNeededForRent: 850,
   },
 
   // Luxury Cars
@@ -125,6 +149,8 @@ export const cars: Car[] = [
     image: "/cars/range-rover-hse.png",
     carType: "Automatic",
     fuel: "Diesel",
+    pointsEarnedPerDay: 225,
+    pointsNeededForRent: 4500,
   },
   {
     class: "Luxury",
@@ -134,6 +160,8 @@ export const cars: Car[] = [
     image: "/cars/volkswagen-touareg.png",
     carType: "Automatic",
     fuel: "Diesel",
+    pointsEarnedPerDay: 225,
+    pointsNeededForRent: 1500,
   },
   {
     class: "Luxury",
@@ -143,6 +171,8 @@ export const cars: Car[] = [
     image: "/cars/range-rover-vogue.png",
     carType: "Automatic",
     fuel: "Diesel",
+    pointsEarnedPerDay: 225,
+    pointsNeededForRent: 5500,
   },
   {
     class: "Luxury",
@@ -152,6 +182,8 @@ export const cars: Car[] = [
     image: "/cars/Mercedes-Benz-AMG-G63.png",
     carType: "Automatic",
     fuel: "Diesel",
+    pointsEarnedPerDay: 225,
+    pointsNeededForRent: 9000,
   },
   {
     class: "Luxury",
@@ -161,5 +193,7 @@ export const cars: Car[] = [
     image: "/cars/Mercedes-Benz-S400.png",
     carType: "Automatic",
     fuel: "Diesel",
+    pointsEarnedPerDay: 225,
+    pointsNeededForRent: 7500,
   },
 ];

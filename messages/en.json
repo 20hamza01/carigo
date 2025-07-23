@@ -22,6 +22,9 @@
     "luxurious": "Luxurious"
   },
   "carCard": {
+    "fidelityPoints": "Loyalty points",
+    "pointsEarnedPerDay": "points/day",
+    "pointsNeededForRent": "points/day",
     "features": "Features",
     "perDay": "per day",
     "bookNow": "Book Now",
