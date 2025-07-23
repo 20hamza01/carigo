@@ -25,7 +25,6 @@ import { toast } from "sonner";
 import { useLocale, useTranslations } from "next-intl";
 import { enUS, fr } from "date-fns/locale";
 import Link from "next/link";
-import { Ponnala } from "next/font/google";
 
 interface CarCardProps {
   carClass: string;
