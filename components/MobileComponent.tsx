@@ -51,7 +51,9 @@ const MobileComponent = () => {
 
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-b from-blue-800 via-blue-500 to-blue-200">
+      <div className="min-h-screen bg-gradient-to-b from-blue-800 to-blue-500 relative overflow-hidden">
+        <div className="rounded-full bg-white/9 absolute h-[500px] w-[500px] left-[230px] top-[-200px]"></div>
+        <div className="rounded-full bg-white/9 absolute h-[500px] w-[500px] right-[260px] top-160"></div>
         <Link
           href={whatsappLink} // Replace with your WhatsApp number
           target="_blank"
