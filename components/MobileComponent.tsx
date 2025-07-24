@@ -74,7 +74,7 @@ const MobileComponent = () => {
             <Car className="text-white h-12 w-12" />
             <p className="text-3xl font-extrabold text-white">CariGO</p>
           </div>
-          <div className="rounded-full border-0 mr-2">
+          <div className="rounded-full border-0 mr-2 z-10">
             <LocaleSwitcher />
           </div>
         </div>
